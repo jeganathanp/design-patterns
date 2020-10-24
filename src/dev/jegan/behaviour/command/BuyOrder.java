@@ -1,14 +1,15 @@
 package dev.jegan.behaviour.command;
 
-public class SellOrder implements Order{
+public class BuyOrder implements Order {
     private StockTrade stockTrade;
-    public SellOrder(StockTrade stockTrade){
+
+    public BuyOrder(StockTrade stockTrade) {
         this.stockTrade = stockTrade;
     }
 
 
     @Override
     public void execute() {
-        stockTrade.sell();
+        stockTrade.buy();
     }
 }

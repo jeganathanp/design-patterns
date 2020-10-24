@@ -1,6 +1,6 @@
 package dev.jegan.behaviour.chainOfResponsibility;
 
-public class InfoLog implements  Chain{
+public class DebugLog implements  Chain{
     private Chain chain;
     @Override
     public void setNext(Chain c) {
@@ -9,8 +9,8 @@ public class InfoLog implements  Chain{
 
     @Override
     public void process(Log log) {
-        if(log.getName().equals("info")){
-            System.out.println("This is info log");
+        if(log.getName().equals("debug")){
+            System.out.println("This is debug log");
         }
         else{
             chain.process(log);
